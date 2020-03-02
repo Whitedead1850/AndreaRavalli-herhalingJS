@@ -4,10 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Opdracht5</title>
 </head>
 
 <body>
+
+
+    <script>
+        var tekst = '<p>Godslastering en andere vuile woorden zullen gecensureerd worden!</p>';
+        document.write(tekst);
+        var woord = prompt('Welk woord wil u censureren?')
+        if (tekst.indexOf(woord) != -1) {
+
+            deel1 = tekst.substr(0, tekst.indexOf(woord)) + "GECENSUREERD";
+            deel2 = tekst.substring(tekst.indexOf(woord) + woord.length, tekst.length);
+            tekst = deel1 + deel2;
+            document.write(tekst);
+
+        } else {
+
+            document.write('<p>Dat woord vind ik niet!</p>')
+            var woord = prompt('Welk woord wil u censureren?')
+
+        }
+    </script>
 
 </body>
 
