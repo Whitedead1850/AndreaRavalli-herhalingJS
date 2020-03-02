@@ -49,7 +49,7 @@
         <input type="number" name="input2" size='15'>
         <input type="button" value="Calculate" onClick='berekenen()'>
 
-        <input type="text" name="answer" size='15'>
+        <input type="text" name="resultaat" size='15'>
     </form>
 </body>
 <script>
@@ -57,7 +57,7 @@
         var inputNum1 = document.form1.input1.value;
         var inputNum2 = document.form1.input2.value;
         var result = Math.pow(inputNum1, inputNum2);
-        document.form1.answer.value = result;
+        document.form1.resultaat.value = result;
     }
 </script>
 
