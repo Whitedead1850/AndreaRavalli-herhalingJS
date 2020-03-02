@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 4</title>
+</head>
+
+<body>
+    <script>
+        var email = prompt("Geef u emailadres in");
+        var chrbeforAt = email.substr(0, email.indexOf('@'));
+        if (email == null) {
+            document.write("U heeft geannulleerd")
+        } else if (email.indexOf("@") == -1 || email.indexOf(".") == -1 || email.indexOf(" ") == 1) {
+            document.write("Dit lijkt geen correct emailadres te zijn!")
+        } else if (chrbeforAt.length <= 2) {
+            document.write("Er moeten minstens 2 tekens voor de @ staan.")
+        } else document.write("Ziet er goed uit!")
+    </script>
+
+</body>
+
+</html>
