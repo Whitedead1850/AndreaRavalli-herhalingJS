@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 10</title>
+</head>
+
+<body>
+    <!-- <form>
+        <input type="number" name="getal1">
+        <input type="number" name="getal2">
+    </form>
+
+    <script>
+        function berekenen(getal1, getal2) {
+            var inputNum1 = document.form1.getal1.value;
+            var inputNum2 = document.form1.getal2.value;
+            /* for (i = 0; i < inputNum2; i++) {
+                var resultaat *= getal1
+            } */
+            for (var resultaat = inputNum1; inputNum2 > 1; resultaat *= inputNum1, inputNum2--);
+
+            document.getElementById('uitkomst').value = resultaat;
+            return resultaat;
+            /* return resultaat
+            document.getElementById('uitkomst').value = resultaat */
+        }
+        console.log(resultaat)
+
+        /* function machtsverheffing() {
+
+         */
+    </script>
+
+    <form>
+
+        <input type="button" onclick="berekenen(inputNum1,inputNum2)" value="Submit">
+        <input type="number" name="uitkomst">
+    </form> -->
+
+
+
+    <form name=form1>
+
+        <input type="number" name="input1" size='15'>
+
+        <input type="number" name="input2" size='15'>
+        <input type="button" value="Calculate" onClick='berekenen()'>
+
+        <input type="text" name="answer" size='15'>
+    </form>
+</body>
+<script>
+    function berekenen() {
+        var inputNum1 = document.form1.input1.value;
+        var inputNum2 = document.form1.input2.value;
+        var result = Math.pow(inputNum1, inputNum2);
+        document.form1.answer.value = result;
+    }
+</script>
+
+</body>
+
+</html>

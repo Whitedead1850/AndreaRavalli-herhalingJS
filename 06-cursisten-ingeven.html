@@ -9,6 +9,35 @@
 
 <body>
     <script>
+        var cursisten = [];
+
+        function ingeven() {
+            var cursist = prompt("voeg een cursist toe. Als je wil stoppen type dan \"0\"");
+
+            switch (cursist) {
+                case null:
+                    document.write('<p>u heeft geanuleerd</p>')
+                    break;
+                case false:
+                    alert('Geanuleerd')
+                case "":
+                    document.write('<p> niets opgegeven</p>')
+                    break;
+                case "0":
+                    document.write('<h2>Dit zijn de cursisten</h2>')
+                    for (i = 0; i < cursisten.length; i++) {
+                        document.write('<p>' + cursisten[i] + '</p>')
+                    }
+                    break;
+                default:
+
+                    cursisten.push(cursist)
+                    ingeven();
+                    break;
+            }
+
+        }
+        ingeven()
     </script>
 
 </body>

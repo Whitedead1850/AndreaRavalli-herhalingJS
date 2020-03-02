@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 8</title>
+</head>
+
+<body>
+    <script>
+        var kostprijs = prompt("Geef de kostprijs");
+        var btwp = prompt("Geef de BTW %");
+        var aantal = prompt("Geef het aantal");
+
+        if (kostprijs == null || btwp == null || aantal == null) {
+            document.write("U heeft geannulleerd!");
+        } else if (isNaN(kostprijs) || isNaN(btwp) || isNaN(aantal)) {
+            document.write("Wat u heeft ingegeven is geen nummer!");
+        } else {
+            var btw = btwp / 100;
+            var totaalbtw = (kostprijs * aantal) * btw;
+            var totaal = (kostprijs * aantal) + totaalbtw;
+            document.write("Voor de prijs van " + kostprijs + ", btw van " + btw + " en " + aantal + " stuks , is de totale prijs " + totaal);
+        }
+    </script>
+
+</body>
+
+</html>
