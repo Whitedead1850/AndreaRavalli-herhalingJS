@@ -17,6 +17,8 @@
             document.write("U heeft geannulleerd!");
         } else if (isNaN(kostprijs) || isNaN(btwp) || isNaN(aantal)) {
             document.write("Wat u heeft ingegeven is geen nummer!");
+        } else if (kostprijs.length == 0 || btwp.length == 0 || aantal.length == 0) {
+            document.write("U heeft niet alles correct ingegeven!")
         } else {
             var btw = btwp / 100;
             var totaalbtw = (kostprijs * aantal) * btw;
