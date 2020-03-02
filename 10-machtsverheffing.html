@@ -8,41 +8,47 @@
 </head>
 
 <body>
-    <!-- <form>
-        <input type="number" name="getal1">
-        <input type="number" name="getal2">
+    <form>
+
     </form>
 
     <script>
-        function berekenen(getal1, getal2) {
-            var inputNum1 = document.form1.getal1.value;
-            var inputNum2 = document.form1.getal2.value;
-            /* for (i = 0; i < inputNum2; i++) {
-                var resultaat *= getal1
-            } */
-            for (var resultaat = inputNum1; inputNum2 > 1; resultaat *= inputNum1, inputNum2--);
-
-            document.getElementById('uitkomst').value = resultaat;
+        function machtverheffing(factor, exponent) {
+            var resultaat = 1;
+            for (var i = 0; i < exponent; i++)
+                resultaat *= factor;
             return resultaat;
-            /* return resultaat
-            document.getElementById('uitkomst').value = resultaat */
+        };
+
+        function bereken() {
+            var g1 = document.formulier.g1.value;
+            var g2 = document.formulier.g2.value;
+            if (g1 == "" || g2 == "" || isNaN(g1) || isNaN(g2)) {
+                schrijf("Gelieve je invoer na te kijken.")
+            } else {
+                var berekening = machtverheffing(g1, g2);
+                schrijf(berekening);
+            }
         }
-        console.log(resultaat)
 
-        /* function machtsverheffing() {
+        function schrijf(tekst) {
+            document.formulier.resultaat.value = tekst;
+        }
 
+        /* 
          */
     </script>
 
-    <form>
+    <form name="formulier">
+        <input type="text" name="g1">
+        <input type="text" name="g2">
+        <input type="button" value="Machtsverheffing" onclick="bereken()">
+        <input name="resultaat" size=50></input>
+    </form>
 
-        <input type="button" onclick="berekenen(inputNum1,inputNum2)" value="Submit">
-        <input type="number" name="uitkomst">
-    </form> -->
 
 
-
-    <form name=form1>
+    <!-- <form name=form1>
 
         <input type="number" name="input1" size='15'>
 
@@ -59,7 +65,7 @@
         var result = Math.pow(inputNum1, inputNum2);
         document.form1.resultaat.value = result;
     }
-</script>
+</script> -->
 
 </body>
 
